@@ -1,16 +1,34 @@
 /* main css */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
 
 /* gradient */
 :root {
   --bg-gradient-onyx: linear-gradient(to bottom right, #3f3f40 3%, #303030 97%);
-  --bg-gradient-jet: linear-gradient(to bottom right, #2d2d2e40 0%, #1b1b1d00 100%), #202022;
-  --bg-gradient-yellow-1: linear-gradient(to bottom right, #ffda6b 0%, #ffc06100 50%);
-  --bg-gradient-yellow-2: linear-gradient(135deg, #ffda6b40 0%, #ffbb5c00 59.86%), #202022;
-  --border-gradient-onyx: linear-gradient(to bottom right, #404040 0%, #40404000)50%;
+  --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      #2d2d2e40 0%,
+      #1b1b1d00 100%
+    ),
+    #202022;
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    #ffda6b 0%,
+    #ffc06100 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+      135deg,
+      #ffda6b40 0%,
+      #ffbb5c00 59.86%
+    ),
+    #202022;
+  --border-gradient-onyx: linear-gradient(
+      to bottom right,
+      #404040 0%,
+      #40404000
+    )
+    50%;
   --text-gradient-yellow: linear-gradient(to right, #ffdb70, #ffbb5c);
 }
 
@@ -32,10 +50,10 @@
 
 /* font-family */
 :root {
-  --ff-poppins: 'Poppins', sans-serif;
-  --ff-great-vibes: 'Great Vibes', cursive;
-  --ff-love-like: 'Love Ya Like A Sister', cursive;
-  --ff-cookie: 'Cookie', cursive;
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-great-vibes: "Great Vibes", cursive;
+  --ff-love-like: "Love Ya Like A Sister", cursive;
+  --ff-cookie: "Cookie", cursive;
 }
 
 /* font size */
@@ -72,7 +90,6 @@
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 }
-
 
 /* presets */
 *,
@@ -140,7 +157,6 @@ body {
   background: var(--smoky-black);
 }
 
-
 /* REUSED STYLE */
 .sidebar,
 article {
@@ -196,7 +212,6 @@ article.active {
   display: block;
   animation: fade 0.5s ease backwards;
 }
-
 
 @keyframes fade {
   0% {
@@ -293,7 +308,6 @@ article.active {
   z-index: -1;
 }
 
-
 /* text style */
 .title-text {
   font-family: var(--ff-love-like);
@@ -306,9 +320,8 @@ article.active {
   font-size: 40px;
   letter-spacing: 2px;
   color: var(--white-2);
-  font-weight: var(--fw-400)
+  font-weight: var(--fw-400);
 }
-
 
 /* main */
 main {
@@ -316,7 +329,6 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
-
 
 /* sidebar */
 .sidebar {
@@ -453,11 +465,9 @@ main {
   font-size: 25px;
 }
 
-
 .social-item .social-link:hover {
   color: var(--light-gray);
 }
-
 
 /* navbar */
 .navbar {
@@ -513,7 +523,6 @@ main {
 .about-text p {
   margin-bottom: 15px;
 }
-
 
 /* service */
 .service {
@@ -596,7 +605,6 @@ main {
   line-height: 1.6;
 }
 
-
 /**
  * #testimonials 
  */
@@ -653,7 +661,6 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 
 /* testimonials-modal */
 .modal-container {
@@ -753,7 +760,7 @@ main {
   box-shadow: var(--shadow-2);
 }
 
-.modal-img-wrapper>img {
+.modal-img-wrapper > img {
   display: none;
 }
 
@@ -774,7 +781,6 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
-
 
 /* clients  */
 .clients {
@@ -811,12 +817,10 @@ main {
   filter: grayscale(0);
 }
 
-
 /* RESUME */
 .article-title {
   margin-bottom: 30px;
 }
-
 
 /* education and experience  */
 .timeline {
@@ -889,7 +893,6 @@ main {
   line-height: 1.6;
 }
 
-
 /* skills  */
 .skills-title {
   margin-bottom: 20px;
@@ -898,7 +901,6 @@ main {
 .skills-list {
   padding: 20px;
 }
-
 
 .skills-item:not(:last-child) {
   margin-bottom: 15px;
@@ -929,7 +931,6 @@ main {
   height: 100%;
   border-radius: inherit;
 }
-
 
 /* PORTFOLIO */
 .filter-list {
@@ -974,7 +975,7 @@ main {
   transition: 0.15s ease-in-out;
 }
 
-.filter-select.active+.select-list {
+.filter-select.active + .select-list {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
@@ -1021,7 +1022,7 @@ main {
   }
 }
 
-.project-item>a {
+.project-item > a {
   width: 100%;
 }
 
@@ -1050,7 +1051,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item>a:hover .project-img::before {
+.project-item > a:hover .project-img::before {
   background: hsla(0, 0%, 0%, 0.5);
 }
 
@@ -1072,7 +1073,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item>a:hover .project-item-icon-box {
+.project-item > a:hover .project-item-icon-box {
   --scale: 1;
   opacity: 1;
 }
@@ -1088,7 +1089,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item>a:hover img {
+.project-item > a:hover img {
   transform: scale(1.1);
 }
 
@@ -1111,7 +1112,6 @@ main {
   font-weight: var(--fw-300);
 }
 
-
 /* blog */
 .blog-posts {
   margin-bottom: 10px;
@@ -1123,7 +1123,7 @@ main {
   gap: 20px;
 }
 
-.blog-post-item>a {
+.blog-post-item > a {
   position: relative;
   background: var(--border-gradient-onyx);
   height: 100%;
@@ -1132,7 +1132,7 @@ main {
   z-index: 1;
 }
 
-.blog-post-item>a::before {
+.blog-post-item > a::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -1155,7 +1155,7 @@ main {
   transition: var(--transition-1);
 }
 
-.blog-post-item>a:hover .blog-banner-box img {
+.blog-post-item > a:hover .blog-banner-box img {
   transform: scale(1.1);
 }
 
@@ -1198,7 +1198,7 @@ main {
   -webkit-line-clamp: 1;
 }
 
-.blog-post-item>a:hover .blog-item-title {
+.blog-post-item > a:hover .blog-item-title {
   color: var(--orange-yellow-crayola);
 }
 
@@ -1208,7 +1208,6 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
-
 
 /* contact */
 .mapbox {
@@ -1334,12 +1333,10 @@ textarea.form-input::-webkit-resizer {
   background: var(--bg-gradient-jet);
 }
 
-
 /* responsive code */
 
 /* responsive larger than 450px screen */
 @media (min-width: 450px) {
-
   /* client */
   .clients-item {
     min-width: calc(33.33% - 10px);
@@ -1350,16 +1347,12 @@ textarea.form-input::-webkit-resizer {
   .blog-banner-box {
     height: auto;
   }
-
 }
-
 
 /* responsive larger than 580px screen */
 @media (min-width: 580px) {
-
   /* CUSTOM PROPERTY */
   :root {
-
     /* typography */
     --fs-1: 32px;
     --fs-2: 24px;
@@ -1576,7 +1569,7 @@ textarea.form-input::-webkit-resizer {
     width: 65px;
   }
 
-  .modal-img-wrapper>img {
+  .modal-img-wrapper > img {
     display: block;
     flex-grow: 1;
     width: 35px;
@@ -1654,13 +1647,10 @@ textarea.form-input::-webkit-resizer {
   .form-btn ion-icon {
     font-size: 18px;
   }
-
 }
-
 
 /* responsive larger than 768px screen */
 @media (min-width: 768px) {
-
   /* REUSED STYLE */
   .sidebar,
   article {
@@ -1681,7 +1671,6 @@ textarea.form-input::-webkit-resizer {
   .navbar-link {
     --fs-8: 15px;
   }
-
 
   /* ABOUT */
   /* testimonials modal */
@@ -1741,21 +1730,16 @@ textarea.form-input::-webkit-resizer {
     width: max-content;
     margin-left: auto;
   }
-
 }
-
 
 /* responsive larger than 1024px screen */
 @media (min-width: 1024px) {
-
   /* CUSTOM PROPERTY */
   :root {
-
     /* shadow */
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
-
   }
 
   /*  REUSED STYLE */
@@ -1798,7 +1782,6 @@ textarea.form-input::-webkit-resizer {
     font-weight: var(--fw-500);
   }
 
-
   /* ABOUT */
   /* service */
   .service-list {
@@ -1825,13 +1808,10 @@ textarea.form-input::-webkit-resizer {
   .blog-banner-box {
     height: 230px;
   }
-
 }
-
 
 /* responsive larger than 1250px screen */
 @media (min-width: 1250px) {
-
   /* RESET */
   body::-webkit-scrollbar {
     width: 20px;
@@ -1948,10 +1928,9 @@ textarea.form-input::-webkit-resizer {
   .timeline-text {
     max-width: 700px;
   }
-
 }
-.skill-card{
+.skill-card {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20;
+  gap: 20px;
 }
