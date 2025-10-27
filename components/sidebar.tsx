@@ -25,7 +25,7 @@ const contacts = [
     icon: ResumeDownload,
     title: "Details",
     content: (
-      <a href={"/resume.pdf"} target="_blank" className="contact-link">
+      <a href={"/Resume.pdf"} target="_blank" className="contact-link">
         Resume
       </a>
     ),
