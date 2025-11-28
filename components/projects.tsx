@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { FiArrowUpRight as Preview } from "react-icons/fi";
 
@@ -71,7 +72,7 @@ const Projects = () => {
                 <div className="project-item-icon-box">
                   <Preview />
                 </div>
-                <img src={src} alt={alt} loading="lazy" />
+                <Image src={src} alt={alt} loading="lazy"/>
               </figure>
               <h3 className="project-title">{title}</h3>
               <p className="project-category">{category}</p>
