@@ -1,8 +1,10 @@
 "use client";
 
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useState } from "react";
 import {
-  FaChevronDown as ChevronDown,
+  FaChevronDown,
+  FaChevronUp,
   FaGithub as Github,
   FaLinkedin as Linkedin,
   FaEnvelope as Mail,
@@ -69,7 +71,7 @@ const Sidebar = () => {
   const [isSidebarActive, setIsSidebarActive] = useState(true);
 
   const toggleSidebar = () => setIsSidebarActive((prev) => !prev);
-
+  const isDesktop: boolean = useMediaQuery("(min-width:768px)");
   return (
     <>
       <aside className={`sidebar ${isSidebarActive ? "active" : ""}`}>
@@ -78,14 +80,18 @@ const Sidebar = () => {
             {/* <img src={"/profile.png"} alt="Mohammed Arafat" width="80" /> */}
           </figure>
           <div className="info-content">
-            <h1 className="name title-text-1" title="NSxVillan">
+            <h1
+              className="name title-text-1"
+              style={{ fontSize: `${isDesktop ? "35px" : "30px"}` }}
+              title="Mohammed Arafat"
+            >
               Mohammed Arafat
             </h1>
             <p className="title">Fullstack developer</p>
           </div>
           <button className="info_more-btn" onClick={toggleSidebar}>
-            <span>Show Details</span>
-            <ChevronDown />
+            <span>{isSidebarActive ? "Hide Details" : "Show Details"}</span>
+            {isSidebarActive ? <FaChevronUp /> : <FaChevronDown />}
           </button>
         </div>
 

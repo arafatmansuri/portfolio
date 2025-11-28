@@ -317,7 +317,7 @@ article.active {
 
 .title-text-1 {
   font-family: var(--ff-cookie);
-  font-size: 40px;
+  /* font-size: 40px; */
   letter-spacing: 2px;
   color: var(--white-2);
   font-weight: var(--fw-400);
@@ -1417,7 +1417,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .info-content .name {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
   }
 
   .info-content .title {
