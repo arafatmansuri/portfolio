@@ -28,11 +28,32 @@ const Projects = () => {
       link: "https://github.com/arafatmansuri/DrawBoard/",
     },
     {
+      src: "/project/ShiftBoardSS.png",
+      alt: "ShiftBoard",
+      title: "Shift Board",
+      category: "fullstack",
+      link: "https://shift-board-sigma.vercel.app/",
+    },
+    {
+      src: "/project/ReWearSS.png",
+      alt: "ReWear",
+      title: "ReWear",
+      category: "fullstack",
+      link: "https://github.com/NOBISSS/Odoo-Hackathon-Project",
+    },
+    {
       src: "/project/SpaceKitSS.png",
       alt: "SpaceKit",
       title: "Space Kit",
       category: "frontend",
       link: "https://arafatmansuri.github.io/SpaceKit/",
+    },
+    {
+      src: "/project",
+      alt: "Coursera Backend",
+      title: "Coursera",
+      category: "backend",
+      link: "https://github.com/arafatmansuri/coursera",
     },
   ];
 
@@ -42,7 +63,7 @@ const Projects = () => {
     (project) => filter === "all" || project.category.toLowerCase() === filter
   );
 
-  const categories = ["all", "fullstack", "frontend"];
+  const categories = ["all", "fullstack", "frontend","backend"];
 
   return (
     <section className="projects">
@@ -72,7 +93,8 @@ const Projects = () => {
                 <div className="project-item-icon-box">
                   <Preview />
                 </div>
-                <Image src={src} alt={alt} loading="lazy"/>
+                <Image src={src} alt={alt} loading="lazy" fill={true} />
+                {/* <img src={src} alt={alt} /> */}
               </figure>
               <h3 className="project-title">{title}</h3>
               <p className="project-category">{category}</p>
