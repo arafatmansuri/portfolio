@@ -1,67 +1,62 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
-import axios from "axios";
-import { useRef } from "react";
+// import { useForm, ValidationError } from "@formspree/react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { PiPaperPlane } from "react-icons/pi";
 import Thanks from "./ui/thanks";
+import axios from "axios";
+
+type Inputs = {
+  message: string;
+  email: string;
+  fullname: string;
+};
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm("xnnqdqgr");
-  const formRef = useRef<HTMLFormElement | null>(null);
-  if (state.succeeded) {
-    if (formRef.current) {
-      const formData = new FormData(formRef.current);
-      axios
-        .post(`/api/sendMail`, {
-          fullname: formData.get("fullname"),
-          email: formData.get("email"),
-          message: formData.get("message"),
-        })
-        .then(() => {})
-        .catch((err) => {
-          console.log(err);
-        });
-    }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid, isSubmitSuccessful },
+  } = useForm<Inputs>();
+
+  const sendMessage: SubmitHandler<Inputs> = async (data) => {
+    await axios.post(`/api/sendMail`, data);
+  };
+  if (isSubmitSuccessful) {
     return <Thanks />;
   }
-
   return (
-    <form onSubmit={handleSubmit} className="form" ref={formRef}>
+    <form onSubmit={handleSubmit(sendMessage)} className="form">
       <div className="input-wrapper">
         <input
           className="form-input"
           id="fullname"
-          type="fullname"
-          name="fullname"
+          type="text"
+          {...register("fullname", { required: true })}
           placeholder="Full name"
-          required
         />
-        <ValidationError
-          prefix="FullName"
-          field="fullname"
-          errors={state.errors}
-        />
+        {errors.fullname && (
+          <p className="text-red-500">Fullname is required</p>
+        )}
         <input
           required
           className="form-input"
           id="email"
           type="email"
-          name="email"
+          {...register("email", { required: true })}
           placeholder="Email address"
         />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
+        {errors.email && <p className="text-red-500">Email is required</p>}
       </div>
       <textarea
         required
         className="form-input"
         id="message"
-        name="message"
+        {...register("message", { required: true })}
         placeholder="Your Message"
       />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
-
-      <button className="form-btn" type="submit" disabled={state.submitting}>
+      {errors.message && <p className="text-red-500">Message is required</p>}
+      <button className="form-btn" type="submit" disabled={!isValid}>
         <PiPaperPlane />
         <span>Send Message</span>
       </button>
