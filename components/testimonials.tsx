@@ -1,20 +1,6 @@
 const Testimonials = () => {
-  const testimonialsData = [
-    {
-      name: "Riya Verma",
-      avatar: "/avatars/girl.png",
-      text: "Sahil kumar dev was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      name: "Abhishek Singh",
-      avatar: "/avatars/boy.png",
-      text: "Sahil kumar dev was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      name: "Aditya Pratap Singh",
-      avatar: "/avatars/boy.png",
-      text: "Sahil kumar dev was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
+  const testimonialsData:{name:string,avatar:string,text:string}[] = [
+    
   ];
 
   return (

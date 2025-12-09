@@ -1,17 +1,33 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import axios from "axios";
+import { useRef } from "react";
 import { PiPaperPlane } from "react-icons/pi";
 import Thanks from "./ui/thanks";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xnnqdqgr");
+  const formRef = useRef<HTMLFormElement | null>(null);
   if (state.succeeded) {
+    if (formRef.current) {
+      const formData = new FormData(formRef.current);
+      axios
+        .post("http://localhost:3000/api/sendMail", {
+          fullname: formData.get("fullname"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        })
+        .then(() => {})
+        .catch((err) => {
+          console.log(err);
+        });
+    }
     return <Thanks />;
   }
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="form" ref={formRef}>
       <div className="input-wrapper">
         <input
           className="form-input"
