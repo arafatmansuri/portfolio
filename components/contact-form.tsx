@@ -13,7 +13,7 @@ const ContactForm = () => {
     if (formRef.current) {
       const formData = new FormData(formRef.current);
       axios
-        .post("http://localhost:3000/api/sendMail", {
+        .post(`/api/sendMail`, {
           fullname: formData.get("fullname"),
           email: formData.get("email"),
           message: formData.get("message"),
