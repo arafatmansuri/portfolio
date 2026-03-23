@@ -1,6 +1,5 @@
 "use client";
 
-// import { useForm, ValidationError } from "@formspree/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { PiPaperPlane } from "react-icons/pi";
 import Thanks from "./ui/thanks";
