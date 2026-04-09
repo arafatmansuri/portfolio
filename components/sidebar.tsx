@@ -5,6 +5,7 @@ import { useState } from "react";
 import {
   FaChevronDown,
   FaChevronUp,
+  FaMediumM,
   FaGithub as Github,
   FaLinkedin as Linkedin,
   FaEnvelope as Mail,
@@ -61,10 +62,10 @@ const socialLinks = [
     icon: Github,
     href: "https://github.com/arafatmansuri",
   },
-  // {
-  //   icon: Lightbulb,
-  //   href: "https://axisbuddy.com",
-  // },
+  {
+    icon: FaMediumM,
+    href: "https://medium.com/@arafatmansuri",
+  },
 ];
 
 const Sidebar = () => {

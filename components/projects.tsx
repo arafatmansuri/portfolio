@@ -14,6 +14,20 @@ const Projects = () => {
       link: "https://www.secondbrain.services/",
     },
     {
+      src: "https://res.cloudinary.com/djjqvm5wn/image/upload/v1775746152/studyNotionLanding_x6wyxm.jpg",
+      alt: "StudyNotion",
+      title: "Study Notion",
+      category: "fullstack",
+      link: "https://study-notion-two-taupe.vercel.app/",
+    },
+    {
+      src: "https://res.cloudinary.com/djjqvm5wn/image/upload/v1775746152/wedplanDashboard_cvylyl.jpg",
+      alt: "WedPlan",
+      title: "Wed Plan",
+      category: "fullstack",
+      link: "https://wedplanweb.vercel.app/",
+    },
+    {
       src: "/project/BookmarkManagerSS.png",
       alt: "BookmarkManager",
       title: "Bookmark Manager",

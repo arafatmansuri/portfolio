@@ -1,10 +1,10 @@
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
+import "../styles/global.css";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../styles/global.css";
-import Script from "next/script";
+import Head from "next/head";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,14 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          async
-          src="https://cloud.umami.is/script.js"
-          data-website-id="13b53d75-1d56-430c-92cc-88fc5470b2e1"
-          strategy="afterInteractive" // Loads after page is interactive
-        />
-      </head>
+      <Head>
+        <script async src="https://cloud.umami.is/script.js"
+          data-website-id="13b53d75-1d56-430c-92cc-88fc5470b2e1"></script>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

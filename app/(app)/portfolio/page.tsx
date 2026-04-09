@@ -5,7 +5,7 @@ const Portfolio = () => {
   return (
     <article className="portfolio" data-page="portfolio">
       <header>
-        <h2 className="h2 article-title title-text">Portfolio</h2>
+        <h2 className="h2 article-title title-text">Projects</h2>
       </header>
       <Projects/>
     </article>
